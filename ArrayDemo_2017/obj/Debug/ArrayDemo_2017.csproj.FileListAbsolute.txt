@@ -1,0 +1,6 @@
+h:\ArrayDemo_2017\ArrayDemo_2017\bin\Debug\ArrayDemo_2017.exe.config
+h:\ArrayDemo_2017\ArrayDemo_2017\bin\Debug\ArrayDemo_2017.exe
+h:\ArrayDemo_2017\ArrayDemo_2017\bin\Debug\ArrayDemo_2017.pdb
+h:\ArrayDemo_2017\ArrayDemo_2017\obj\Debug\ArrayDemo_2017.csprojResolveAssemblyReference.cache
+h:\ArrayDemo_2017\ArrayDemo_2017\obj\Debug\ArrayDemo_2017.exe
+h:\ArrayDemo_2017\ArrayDemo_2017\obj\Debug\ArrayDemo_2017.pdb
