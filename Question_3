@@ -1,0 +1,75 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Queston_3
+{
+    class Program
+    {
+        //  delared public and static at class level so can be accessed throughout the class
+
+        public static int[] salesAmount = new int[5]; // array to store sales amount
+
+        public static int[] numbsInRange = new int[5]; // every sales amouont with have a range
+
+        //  array to store ranges
+        public static double[] range = { 99.99, 199.99, 399.99, 599.99, 600 };  // delcaring and initiating an array with values
+
+        static void Main(string[] args)
+        {
+            fillSalesArray();
+            compareSalesInRange();
+            printToScreen();
+        }
+
+        public static void fillSalesArray()     // method to fill array with sales
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                // input to fill the salesAmount array
+                Console.WriteLine("\nEnter sale Amount (-999 to quit) :");
+                salesAmount[i] = int.Parse(Console.ReadLine());
+            }
+        }
+
+        public static void compareSalesInRange()        // method to compare sales to the range array
+        {
+            for (int i = 0; i < salesAmount.Length; i++)
+            {
+                if (salesAmount[i] <= range[0])
+                {
+                    numbsInRange[0] += 1;
+
+                }
+                else if (salesAmount[i] <= range[1])
+                {
+                    numbsInRange[1] += 1;
+                }
+                else if (salesAmount[i] <= range[2])
+                {
+                    numbsInRange[2] += 1;
+                }
+                else if (salesAmount[i] <= range[3])
+                {
+                    numbsInRange[3] += 1;
+                }
+                else
+                    numbsInRange[4] += 1;
+            }
+        }
+
+        public static void printToScreen()    // displaying report on console
+        {
+            Console.WriteLine("Sales Amount Report");
+            Console.WriteLine("\n\n{0,-15}{1,-15}", "Range", "Number in Range");
+            Console.WriteLine("\n{0,-15}{1,-15}", "000-99.99", numbsInRange[0]);
+            Console.WriteLine("\n{0,-15}{1,-15}", "100-199.99", numbsInRange[1]);
+            Console.WriteLine("\n{0,-15}{1,-15}", "200-399.99", numbsInRange[2]);
+            Console.WriteLine("\n{0,-15}{1,-15}", "400-599.99", numbsInRange[3]);
+            Console.WriteLine("\n{0,-15}{1,-15}", "600+", numbsInRange[4]);
+            Console.ReadLine();
+        }
+    }
+}
